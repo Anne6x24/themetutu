@@ -6,15 +6,23 @@ get_header();
 
 <style>
 
+#toppen, .kjole1, #midten, #bunden, .slideshow {
+    margin: 2rem;
+}
+
+h3 {
+    margin-bottom: 0rem;
+}
+
 
 
 </style>
 
 <section id="primary" class="content-area">
-    <!-- <main id="site-content" class="site-content"> -->
-    <section id="toppen">
-        <img class="hero" src="" alt="HERO">
+   
+        <img class="hero" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/A976787-R2-05-32.jpg" alt="HERO">
         <div id="tekst_1">
+    <section id="toppen">
     <h1 id="headline" class="secondhand">Secondhand i børnehøjde</h1>
     <p class="secondhand">Mange har et ønske om at klæde deres børn lækkert og smart på. 
         Det kan skabe glæder hos de fleste mødre, at deres børn også ser godt ud. 
@@ -39,10 +47,42 @@ get_header();
         <div class="insta">
         <a href="https://www.instagram.com/lilletutu_secondhand/">@lilletutu_secondhand</a>
         </div>
+    <!-- slideshow -->
     </section>
-    <!-- </main> -->
+    <section>
+    
+  <div class="slideshow">
+    <img class="mySlides" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta1.png">
+    <img class="mySlides" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta2.png">
+    <img class="mySlides" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta3.png">
+
+  </div>
 
 </section>
+
+    
+   
+
+</section>
+
+<script>
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
 <?php
 
 get_footer();
