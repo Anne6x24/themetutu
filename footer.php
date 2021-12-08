@@ -42,9 +42,16 @@
 	
 /* styling af e-mailbox */
 
-.container {
+.container1 {
 	background-color: none;
 	margin: 2rem;
+	margin-bottom: 0;
+}
+
+.container2 {
+	background-color: none;
+	margin: 2rem;
+	margin-top: 0;
 }
 
 /* Style the input elements and the submit button */
@@ -84,6 +91,27 @@ input[type=submit] {
 input[type=submit]:hover {
   opacity: 0.8;
 }
+
+@media(min-width: 768px) {
+	.container1 {
+		margin-left: 30vw;
+		margin-right: 30vw;
+	}
+
+	.container2 {
+		margin-left: 45vw;
+		margin-right: 45vw;
+	}
+
+	input[type=text] {
+		margin-bottom: 0;
+	}
+
+	input[type=submit] {
+		margin-top: 1rem;
+	}
+
+}
 </style>
 
 	</main>
@@ -98,11 +126,11 @@ input[type=submit]:hover {
 				TILMELD DIG VORES NYHEDSBREV!</p>
   </div>
 
-  <div class="container">
+  <div class="container1">
     <input type="text" placeholder="Email address" name="mail" required>
   </div>
 
-  <div class="container">
+  <div class="container2">
     <input type="submit" value="Send">
   </div>
 </form>

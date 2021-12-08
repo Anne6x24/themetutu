@@ -14,8 +14,64 @@ h3 {
     margin-bottom: 0rem;
 }
 
+.hero2 {
+    display: none;
+}
+
 .insta {
     color: black;
+}
+
+.insta_grid {
+    display: none;
+}
+
+@media(min-width: 768px) {
+
+    .hero1 {
+        display: none;
+    }
+
+    .hero2 {
+        display: block;
+    }
+
+    #toppen {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 18rem;
+        margin-right: 18rem;
+        gap: 4rem;
+    }
+
+    
+
+    .kjole1 {
+        margin: 0;
+        margin-top: 4rem;
+    }
+
+    .slideshow {
+        display: none;
+    }
+
+    .insta_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 6rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        
+    }
+
+
+    .insta {
+        position: relative;
+        float: right;
+    }
+
 }
 
 
@@ -23,9 +79,11 @@ h3 {
 
 <section id="primary" class="content-area">
    
-        <img class="hero" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/A976787-R2-05-32.jpg" alt="HERO">
-        <div id="tekst_1">
+        <img class="hero1" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/A976787-R2-05-32.jpg" alt="HERO">
+        <img class="hero2" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/hero.png" alt="HERO">
+        
     <section id="toppen">
+    <div id="tekst_1">
     <h1 id="headline" class="secondhand">Secondhand i børnehøjde</h1>
     <p class="secondhand">Mange har et ønske om at klæde deres børn lækkert og smart på. 
         Det kan skabe glæder hos de fleste mødre, at deres børn også ser godt ud. 
@@ -53,11 +111,19 @@ h3 {
     <!-- slideshow -->
     </section>
    
+    <div class="insta_grid">
+    <img class="pic1" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta1.png">
+    <img class="pic2" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta2.png">
+    <img class="pic3" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta3.png">
+    <img class="pic4 "src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta4.png">
+
+  </div>
     
   <div class="slideshow">
     <img class="mySlides" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta1.png">
     <img class="mySlides" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta2.png">
     <img class="mySlides" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta3.png">
+    <img class="mySlides "src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta4.png">
 
   </div>
 
