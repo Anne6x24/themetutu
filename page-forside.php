@@ -14,6 +14,9 @@ h3 {
     margin-bottom: 0rem;
 }
 
+.insta {
+    color: black;
+}
 
 
 </style>
@@ -45,11 +48,11 @@ h3 {
         <h3>Find os på instagram</h3>
         </div>
         <div class="insta">
-        <a href="https://www.instagram.com/lilletutu_secondhand/">@lilletutu_secondhand</a>
+        <a class="insta" href="https://www.instagram.com/lilletutu_secondhand/">@lilletutu_secondhand</a>
         </div>
     <!-- slideshow -->
     </section>
-    <section>
+   
     
   <div class="slideshow">
     <img class="mySlides" src="https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-content/uploads/2021/12/insta1.png">
