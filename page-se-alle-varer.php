@@ -27,8 +27,7 @@ get_header();
 </template> 
 
 <script>
-    // https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-json/wp/v2/vare?per_page=100
-    // https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-json/wp/v2/categories
+
 
     let varer =[];
     const indhold = document.querySelector("#vare_oversigt");
@@ -55,10 +54,13 @@ get_header();
             klon.querySelector(".produkt").src = vare.billede_front.guid;
             klon.querySelector(".pris").innerHTML = vare.pris;
             klon.querySelector(".storrelse").innerHTML = vare.storrelse;
-
+        
+            klon.querySelector(".her1").addEventListener("click", () => {
+                location.href = vare.link;
+            })
             indhold.appendChild(klon);
         })
-    }
+        }
 
 </script>
 
