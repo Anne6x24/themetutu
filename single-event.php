@@ -29,7 +29,7 @@ get_header();
             let jsonData = await fetch('https://annemunksgaard.dk/kea/02sem/eksamen_tutu/tutu_wp/wp-json/wp/v2/event/<?php echo get_the_ID() ?>');
             event = await jsonData.json();
             console.log("event", event);
-            visVare();
+            visEvent();
             
         }
 
@@ -43,6 +43,10 @@ get_header();
         
     }
 
+    document.querySelector(".luk").addEventListener("click", () => {
+            //link tilbage til den foregående side på "luk" knappen
+            history.back();
+        })
 </script>
 
 <?php

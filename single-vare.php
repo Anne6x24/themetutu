@@ -45,6 +45,11 @@ get_header();
         document.querySelector(".pris").textContent = vare.pris;
     }
 
+    document.querySelector(".luk").addEventListener("click", () => {
+            //link tilbage til den foregående side på "luk" knappen
+            history.back();
+        })
+
 </script>
 
 

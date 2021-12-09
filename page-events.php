@@ -22,6 +22,7 @@ get_header();
     <article class="kasse_1">
         <img class="foto" src="" alt="">
         <h3 class="navn"></h3>
+        <button class="her1">LÆS MERE</button>
     </article>
 
 </template> 
@@ -53,6 +54,9 @@ get_header();
             const klon = skabelon.cloneNode(true).content;
             klon.querySelector(".navn").textContent = event.navn;
             klon.querySelector(".foto").src = event.img1.guid;
+            klon.querySelector(".her1").addEventListener("click", () => {
+                location.href = event.link;
+            })
             indhold.appendChild(klon);
         })
     }
