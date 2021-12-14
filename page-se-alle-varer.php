@@ -3,12 +3,117 @@
 get_header();
 ?>
 
+<style>
+
+.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+    background-color: var(none);
+    background-color: var(--go-button-interactive--color--background,var(none));
+    cursor: pointer;
+}
+
+/* knapper */
+
+#filtrering {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.filter, .filter_valgt {
+    background-image: none;
+    background-color: #FFFFFF;
+    color: black;
+    margin: 1vw;
+    padding: 2vw;
+}
+
+
+
+.her1 {
+    background-image: none;
+    background-color: white;
+    color: black;
+}
+
+.her1:hover {
+    background-color: white;
+    text-decoration: underline;
+}
+
+.filter_valgt:hover {
+    background-image: none;
+    color: black;
+    text-decoration: underline;
+    
+}
+
+button {
+    padding: 0;
+}
+
+button:hover {
+    background-color: white;
+    text-decoration: underline;
+}
+
+/* produktgrid */
+
+#vare_oversigt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2vw;
+    padding: 32px;
+}
+
+#vare_oversigt{
+    grid-column: 1/2;
+    grid-row: 1;
+    /* padding: 8vw;
+    margin: 2vw; */
+}
+
+h3, p {
+    font-size: 1rem;
+}
+
+
+
+@media(min-width: 768px) {
+
+#vare_oversigt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    
+}
+
+#vare_oversigt{
+    grid-column: 1/2;
+    grid-row: 1;
+    padding-left: 8vw;
+padding-right: 8vw;
+margin-right: 2vw;
+margin-left: 2vw;
+margin-top: 0;
+padding-top: 0;
+}
+
+.kasse_1{
+    margin: 4rem;
+}
+
+}
+
+
+
+</style>
+
 <section id="primary" class="content-area">
     <h1>her kan du se alle vores vare</h1>
 
     <section>
     <nav id="filtrering"><button class="filter_valgt" data-vare="alle">Alle</button></nav>
-    <h3 class="vare_o">Alle varer</h3>
+    <!-- <h3 class="vare_o">Alle varer</h3> -->
     </section>
 
 <section id="vare_oversigt"></section>
@@ -18,7 +123,7 @@ get_header();
 <template>
     <article class="kasse_1">
         <img class="produkt" src="" alt="">
-        <h3 class="navn"></h3>
+        <h3 class="navn"><strong></strong></h3>
         <p class="pris"></p>
         <p class="storrelse">Henvendelse: </p>
         <button class="her1">LÆS MERE</button>
@@ -101,6 +206,8 @@ get_header();
             const klon = skabelon.cloneNode(true).content;
             klon.querySelector(".navn").textContent = vare.navn;
             klon.querySelector(".produkt").src = vare.billede_front.guid;
+            klon.querySelector(".produkt").alt = vare.navn;
+            
             klon.querySelector(".pris").innerHTML = vare.pris;
             klon.querySelector(".storrelse").innerHTML = vare.storrelse;
         

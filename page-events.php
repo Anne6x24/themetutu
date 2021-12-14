@@ -20,8 +20,13 @@ get_header();
 
 <template>
     <article class="kasse_1">
-        <img class="foto" src="" alt="">
         <h3 class="navn"></h3>
+        <img class="foto1" src="" alt="">
+        <img class="foto2" src="" alt="">
+        <h4 class="overskrift"></h4>
+        <p class="beskrivelse"></p>
+        <p class="dato"></p>
+       
         <button class="her1">LÆS MERE</button>
     </article>
 
@@ -53,7 +58,10 @@ get_header();
         events.forEach(event => {
             const klon = skabelon.cloneNode(true).content;
             klon.querySelector(".navn").textContent = event.navn;
-            klon.querySelector(".foto").src = event.img1.guid;
+            klon.querySelector(".foto1").src = event.img1.guid;
+            klon.querySelector(".foto2").src = event.img2.guid;
+            klon.querySelector(".overskrift").innerHTML = event.overskrift;
+            klon.querySelector(".beskrivelse").innerHTML = event.beskrivelse;
             klon.querySelector(".her1").addEventListener("click", () => {
                 location.href = event.link;
             })

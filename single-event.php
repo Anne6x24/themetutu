@@ -9,10 +9,11 @@ get_header();
 <section class="indhold">
     <article class="enkeltEvent">
     <h3 class="navn"></h3>
-    <img class="img_h" src="" alt="">
-    <img class="img_v" src="" alt="">
-        <h3 class="overskrift"></h3>
-        <p class="tekst_e"></p>
+        <img class="foto1" src="" alt="">
+        <img class="foto2" src="" alt="">
+        <h4 class="overskrift"></h4>
+        <p class="beskrivelse"></p>
+        <p class="dato"></p>
     </article>
 </section>
     
@@ -36,10 +37,10 @@ get_header();
     function visEvent() {
         console.log(event);
         document.querySelector(".navn").textContent = event.navn;
-        document.querySelector(".img_h").src = event.img1.guid;
-        document.querySelector(".img_v").src = event.img2.guid;
-        document.querySelector(".overskrift").textContent = event.overskrift;
-        document.querySelector(".tekst_e").textContent = event.tekst;
+        document.querySelector(".foto1").src = event.img1.guid;
+        document.querySelector(".foto2").src = event.img2.guid;
+        document.querySelector(".overskrift").innerHTML = event.overskrift;
+        document.querySelector(".beskrivelse").innerHTML = event.beskrivelse;
         
     }
 

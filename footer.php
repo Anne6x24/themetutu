@@ -23,7 +23,7 @@
 	}
 
 	a {
-		color: white;
+		color: black;
 	}
 
 	a:hover {
