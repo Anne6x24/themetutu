@@ -3,6 +3,92 @@
 get_header();
 ?>
 
+<style>
+
+#primary {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
+}
+
+p {
+    color: black;
+}
+
+#event_oversigt {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    /* margin-left: 2rem;
+    margin-right: 2rem; */
+}
+
+.her1 {
+    background-image: none;
+    background-color: white;
+    color: black;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 1rem;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #000000;
+    border-radius: 1px;
+
+}
+
+.her1:hover {
+    text-decoration: underline;
+    background-color: white;
+}
+
+.kasse_1 .navn {
+    grid-column: 2;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+@media(min-width: 768px) {
+
+#primary {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 5rem;
+}
+
+#event_oversigt {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    
+}
+
+
+.kasse_1 .navn {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1em;
+    margin-bottom: 1rem;
+}
+
+.foto1 {
+    grid-column: ;
+    grid-row: 2;
+}
+
+.her1 {
+    text-align: center;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #000000;
+    border-radius: 1px;
+    font-size: 1rem;
+}
+
+}
+</style>
+
 <section id="primary" class="content-area">
 
 <h3 class="event_o">Mini events</h3>
@@ -20,14 +106,9 @@ get_header();
 
 <template>
     <article class="kasse_1">
-        <h3 class="navn"></h3>
+        <!-- <h3 class="navn"><b></b></h3> -->
         <img class="foto1" src="" alt="">
-        <img class="foto2" src="" alt="">
-        <h4 class="overskrift"></h4>
-        <p class="beskrivelse"></p>
-        <p class="dato"></p>
-       
-        <button class="her1">LÆS MERE</button>
+        <button class="her1"></button>
     </article>
 
 </template> 
@@ -57,11 +138,9 @@ get_header();
         console.log(events);
         events.forEach(event => {
             const klon = skabelon.cloneNode(true).content;
-            klon.querySelector(".navn").textContent = event.navn;
+            // klon.querySelector(".navn").textContent = event.navn;
             klon.querySelector(".foto1").src = event.img1.guid;
-            klon.querySelector(".foto2").src = event.img2.guid;
-            klon.querySelector(".overskrift").innerHTML = event.overskrift;
-            klon.querySelector(".beskrivelse").innerHTML = event.beskrivelse;
+            klon.querySelector(".her1").textContent = event.navn;
             klon.querySelector(".her1").addEventListener("click", () => {
                 location.href = event.link;
             })

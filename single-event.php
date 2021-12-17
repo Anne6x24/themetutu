@@ -3,6 +3,65 @@
 get_header();
 
 ?>
+
+<style>
+
+.enkeltEvent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    gap: 1rem;
+}
+
+.foto1 {
+    grid-column: 1/2;
+    grid-row: 2;
+}
+
+.foto2 {
+    grid-column: 2/3;
+    grid-row: 2;
+}
+
+.overskrift {
+    grid-column: 1/3;
+    grid-row: 3;
+}
+
+.beskrivelse {
+    grid-column: 1/3;
+    grid-row: 4;
+}
+
+.dato {
+    grid-column: 1/3;
+    grid-row: 5;
+}
+
+.navn {
+    grid-column: 1/3;
+}
+
+/* h3, h4, p {
+    margin-left: 2rem;
+    margin-right: 2rem;
+} */
+
+
+
+    @media(min-width: 768px) {
+        .enkeltEvent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    gap: 2rem;
+}
+        
+
+}
+</style>
 <section id="primary" class="content-area">
 
 <button class="luk">Tilbage</button>

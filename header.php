@@ -17,6 +17,15 @@ $header_flex_class = in_array( get_theme_mod( 'header_variation', \Go\Core\get_d
 
 	a {
 		color: black;
+		
+	}
+
+	#menu-burger {
+		font-family: "Hind", Sans-serif !important;
+	}
+
+	:root {
+		--go-heading--font-family: "Hind", Sans-serif !important;
 	}
 
 </style>

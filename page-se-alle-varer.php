@@ -109,7 +109,7 @@ padding-top: 0;
 </style>
 
 <section id="primary" class="content-area">
-    <h1>her kan du se alle vores vare</h1>
+    
 
     <section>
     <nav id="filtrering"><button class="filter_valgt" data-vare="alle">Alle</button></nav>
@@ -154,7 +154,7 @@ padding-top: 0;
 
     // henter og fetcher jsonindhold
     async function getJson() {
-        // henter retter
+        // henter vare
         let response = await fetch(url);
         // henter kategorier
         let catResponse = await fetch(catUrl);

@@ -134,7 +134,7 @@ h3 {
     function visVare() {
         console.log(vare);
         document.querySelector(".produkt_f").src = vare.billede_front.guid;
-        document.querySelector(".produkt_b").src = vare.billede_bag.guid;
+        // document.querySelector(".produkt_b").src = vare.billede_bag.guid;
         document.querySelector(".navn").textContent = vare.navn;
         document.querySelector(".tekst").textContent = vare.tekst;
         document.querySelector(".storrelse").textContent = vare.storrelse;
