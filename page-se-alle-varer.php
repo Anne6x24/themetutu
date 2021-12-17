@@ -5,6 +5,16 @@ get_header();
 
 <style>
 
+.o1, .text1 {
+    text-align: center;
+    color: black;
+}
+
+.text1 {
+    margin-left: 14vw;
+margin-right: 14vw;
+}
+
 .button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
     background-color: var(none);
     background-color: var(--go-button-interactive--color--background,var(none));
@@ -109,7 +119,11 @@ padding-top: 0;
 </style>
 
 <section id="primary" class="content-area">
-    
+    <h2 class="o1">LILLEtutu's vareoversigt</h2>
+    <p class="text1">Nedenfor viser vi alle de unikke secondhand varer, som lige nu er til at få fingrene i!
+        For køb af disse vare, bedes man skrive en mail til os med varen varenummer - på forhånd tak!
+    </p>
+    <p class="text1">Ønsker du at se tøjet nærmere, så kom ned i butikken og kig ind!</p>
 
     <section>
     <nav id="filtrering"><button class="filter_valgt" data-vare="alle">Alle</button></nav>

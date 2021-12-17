@@ -28,6 +28,10 @@ $header_flex_class = in_array( get_theme_mod( 'header_variation', \Go\Core\get_d
 		--go-heading--font-family: "Hind", Sans-serif !important;
 	}
 
+	.menu-is-open .header__navigation-inner > div {
+		height: 50% !important;
+	}
+
 </style>
 <!doctype html>
 <html <?php language_attributes(); ?>>

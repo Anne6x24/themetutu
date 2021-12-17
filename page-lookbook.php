@@ -7,8 +7,103 @@ get_header();
 
 #billede_oversigt {
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    gap: 4rem;
+}
+
+.g1 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+
+.g2 {
+    grid-column: 4/6;
+    grid-row: 1/2;
+}
+
+.g3 {
+    grid-column: 1/6;
+    grid-row: 2;
+    padding-top: 3rem;
+}
+
+.g4 {
+    grid-column: 1/4;
+    grid-row: 3;
+    padding-top: 5rem;
+}
+.g5 {
+    grid-column: 4/6;
+    grid-row: 3;
+    padding-top: 5rem;
+}
+.g6 {
+    grid-column: 2/6;
+    grid-row: 4;
+    padding-top: 5rem;
+}
+.g7 {
+    grid-column: 1/5;
+    grid-row: 5;
+    padding-top: 5rem;
+}
+.g8 {
+    grid-column: 2/6;
+    grid-row: 6;
+    padding-top: 10rem;;
+}
+.g9 {
+    grid-column: 1/6;
+    grid-row: 7;
+    padding-top: 5rem;
+}
+.g10 {
+    grid-column: 1/6;
+    grid-row: 8;
+    padding-top: 5rem;
+}
+.g11 {
+    grid-column: 1/4;
+    grid-row: 9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.g12 {
+    grid-column: 4/6;
+    grid-row: 9;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.g13 {
+    grid-column: 1/5;
+    grid-row: 10;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.g14 {
+    grid-column: 2/6;
+    grid-row: 11;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.g15 {
+    grid-column: 1/6;
+    grid-row: 12;
+    
+    padding-bottom: 5rem;
+}
+
+@media(min-width: 768px) {
+
+#billede_oversigt {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-top: 4rem;
+    margin-left: 0;
+    margin-right: 0;
     gap: 4rem;
 }
 
@@ -92,6 +187,7 @@ get_header();
     grid-row: 10;
     
     padding-bottom: 10rem;
+}
 }
 
 
