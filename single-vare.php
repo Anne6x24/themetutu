@@ -29,14 +29,48 @@ get_header();
 }
 
 h3 {
-    grid-column: 1/3;
+    grid-column: 2/4;
+    grid-row: 1;
 }
 
-p {
-    grid-column: 1/3;
+.varenr {
+    grid-column: 2/4;
+    grid-row: 1;
+    margin-top: 4rem;
+}
+
+.tekst {
+    grid-column: 2/4;
+    grid-row: 2;
     margin-top: -1rem;
     margin-bottom: 0rem;
     color: black;
+}
+
+.pris {
+    grid-column: 2/4;
+    grid-row: 2;
+    margin-top: 10rem;
+    margin-bottom: 0rem;
+    color: black;
+}
+
+.storrelse {
+    grid-column: 2/4;
+    grid-row: 2;
+    margin-top: 8rem;
+    margin-bottom: 0rem;
+    color: black;
+}
+
+.luk {
+    background-color: white;
+    color: black;
+    margin-left: 3vw;
+}
+
+.luk:hover {
+    background-color: white;
 }
 
 
@@ -51,15 +85,21 @@ p {
     
 }
 
+.enkeltVare{
+    grid-column: 2/4;
+    grid-row: 1;
+}
+
 h3 {
-    grid-column: 2/3;
+    grid-column: 3/4;
     margin-top: -1rem;
     margin-bottom: 0rem;
 }
 
-.enkeltVare{
-    grid-column: 2/4;
-    grid-row: 1;
+.varenr {
+    grid-column: 3/4;
+    grid-row: 2;
+    margin-top: 3rem;
 }
 
 .produkt_f {
@@ -72,25 +112,27 @@ h3 {
     grid-row: 3;
 }
 
+
+
 .tekst {
     grid-column: 3/4;
     grid-row: 2;
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 .storrelse {
     grid-column: 3/4;
     grid-row: 2;
-    margin-top: 10rem;
+    margin-top: 12rem;
 }
 .pris {
     grid-column: 3/4;
     grid-row: 2;
-    margin-top: 12rem;
+    margin-top: 14rem;
 }
 
-.storrelse, .pris {
+/* .storrelse, .pris {
     text-align: right;
-}
+} */
 
 
 
@@ -102,15 +144,14 @@ h3 {
 <button class="luk">Tilbage</button>
 <section class="indhold">
     <article class="enkeltVare">
-    <h3 class="navn"></h3>
-
     <img class="produkt_f" src="" alt="">
     <img class="produkt_b" src="" alt="">
-        
+        <h3 class="navn"></h3>
+        <p class="varenr">vr.: </p>
         <p class="tekst"></p>
         <p class="storrelse"></p>
         <p class="pris"></p>
-        <p>HVAD GØR MAN HVIS MAN VIL KØBE DET?</p>
+        
     </article>
 </section>
     
@@ -136,6 +177,7 @@ h3 {
         document.querySelector(".produkt_f").src = vare.billede_front.guid;
         // document.querySelector(".produkt_b").src = vare.billede_bag.guid;
         document.querySelector(".navn").textContent = vare.navn;
+        document.querySelector(".varenr").textContent += vare.varenr;
         document.querySelector(".tekst").textContent = vare.tekst;
         document.querySelector(".storrelse").textContent = vare.storrelse;
         document.querySelector(".pris").textContent = vare.pris;

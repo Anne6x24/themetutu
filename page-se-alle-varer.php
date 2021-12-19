@@ -84,6 +84,12 @@ button:hover {
 
 h3, p {
     font-size: 1rem;
+    color: black;
+    margin-bottom: 2vw;
+}
+
+.kasse_1{
+    margin-bottom: 2rem;
 }
 
 
@@ -110,6 +116,11 @@ padding-top: 0;
 
 .kasse_1{
     margin: 4rem;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-bottom: 1rem;
 }
 
 }
@@ -119,7 +130,7 @@ padding-top: 0;
 </style>
 
 <section id="primary" class="content-area">
-    <h2 class="o1">LILLEtutu's vareoversigt</h2>
+    <h2 class="o1">LILLE tutus vareoversigt</h2>
     <p class="text1">Nedenfor viser vi alle de unikke secondhand varer, som lige nu er til at få fingrene i!
         For køb af disse vare, bedes man skrive en mail til os med varen varenummer - på forhånd tak!
     </p>
@@ -138,8 +149,9 @@ padding-top: 0;
     <article class="kasse_1">
         <img class="produkt" src="" alt="">
         <h3 class="navn"><strong></strong></h3>
+        <p class="varenr">vr.: </p>
         <p class="pris"></p>
-        <p class="storrelse">Henvendelse: </p>
+        <p class="storrelse"></p>
         <button class="her1">LÆS MERE</button>
     </article>
 
@@ -221,6 +233,7 @@ padding-top: 0;
             klon.querySelector(".navn").textContent = vare.navn;
             klon.querySelector(".produkt").src = vare.billede_front.guid;
             klon.querySelector(".produkt").alt = vare.navn;
+            klon.querySelector(".varenr").textContent += vare.varenr;
             
             klon.querySelector(".pris").innerHTML = vare.pris;
             klon.querySelector(".storrelse").innerHTML = vare.storrelse;

@@ -19,6 +19,8 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
     /* margin-left: 2rem;
     margin-right: 2rem; */
 }
@@ -30,10 +32,7 @@ p {
     text-align: left;
     font-size: 0.8rem;
     padding: 1rem;
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: #000000;
-    border-radius: 1px;
+    
 
 }
 
@@ -61,6 +60,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
+    text-align: center;
     
 }
 
@@ -79,10 +79,6 @@ p {
 
 .her1 {
     text-align: center;
-    border-style: solid;
-    border-width: 1px 1px 1px 1px;
-    border-color: #000000;
-    border-radius: 1px;
     font-size: 1rem;
 }
 
@@ -93,7 +89,7 @@ p {
 
 <h3 class="event_o">Mini events</h3>
 <p>Der vil løbende komme små pop-up events for børn og baby og forældre hos LILLE Tutu. 
-    Følg med på denne side eller på instagram <a href="">@lilletutu_secondhand</a>, for at være opdateret. 
+    Følg med på denne side eller på instagram <a href="https://xd.adobe.com/view/ce42b194-64c2-466a-b975-e38f101ad629-9b11/?fullscreen&hints=off">@lilletutu_secondhand</a>, for at være opdateret. 
     For booking af et event, kontakt os på mail <a href="mailto:lilletutu@email.com">yoga@leabresson.dk</a>.</p>
     <!-- <nav id="filtrering"><button class="filter_valgt" data-vare="alle">Alle</button></nav>
   
@@ -139,7 +135,7 @@ p {
         events.forEach(event => {
             const klon = skabelon.cloneNode(true).content;
             // klon.querySelector(".navn").textContent = event.navn;
-            klon.querySelector(".foto1").src = event.img1.guid;
+            klon.querySelector(".foto1").src = event.img01.guid;
             klon.querySelector(".her1").textContent = event.navn;
             klon.querySelector(".her1").addEventListener("click", () => {
                 location.href = event.link;

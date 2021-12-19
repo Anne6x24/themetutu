@@ -43,6 +43,16 @@ get_header();
     grid-column: 1/3;
 }
 
+.luk {
+    background-color: white;
+    color: black;
+    margin-left: 3vw;
+}
+
+.luk:hover {
+    background-color: white;
+}
+
 /* h3, h4, p {
     margin-left: 2rem;
     margin-right: 2rem;
