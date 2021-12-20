@@ -132,7 +132,7 @@ p {
 <section id="primary" class="content-area">
     <h2 class="o1">LILLE tutus vareoversigt</h2>
     <p class="text1">Nedenfor viser vi alle de unikke secondhand varer, som lige nu er til at få fingrene i!
-        For køb af disse vare, bedes man skrive en mail til os med varen varenummer - på forhånd tak!
+        For køb af disse vare, bedes man skrive en mail til os med varens varenummer - på forhånd tak!
     </p>
     <p class="text1">Ønsker du at se tøjet nærmere, så kom ned i butikken og kig ind!</p>
 
@@ -149,7 +149,7 @@ p {
     <article class="kasse_1">
         <img class="produkt" src="" alt="">
         <h3 class="navn"><strong></strong></h3>
-        <p class="varenr">vr.: </p>
+        <p class="varenr">vrn.: </p>
         <p class="pris"></p>
         <p class="storrelse"></p>
         <button class="her1">LÆS MERE</button>

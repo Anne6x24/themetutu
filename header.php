@@ -20,6 +20,10 @@ $header_flex_class = in_array( get_theme_mod( 'header_variation', \Go\Core\get_d
 		
 	}
 
+	a:hover {
+    color: #E4B685 !important;
+}
+
 	#menu-burger {
 		font-family: "Hind", Sans-serif !important;
 	}
